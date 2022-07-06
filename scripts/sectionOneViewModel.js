@@ -1,7 +1,7 @@
 
-define(['libs/knockout-3.5.1', 'customBindingHandlers/hasFocus'], function(ko) {
+define(['libs/knockout-3.5.1'], function(ko) {
 
-    const appViewModel = function appViewModel() {
+    const sectionOneViewModel = function() {
 
         this.firstName = ko.observable('Bert');
 
@@ -14,5 +14,5 @@ define(['libs/knockout-3.5.1', 'customBindingHandlers/hasFocus'], function(ko) {
         this.isEditingName = ko.observable();
     };
 
-    return appViewModel;
+    return sectionOneViewModel;
 });

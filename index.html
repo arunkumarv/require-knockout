@@ -3,10 +3,24 @@
         <script type="text/javascript" data-main="scripts/init.js" src="scripts/libs/require.js"></script>
     </head>
     <body>
-        <p>
-            First name: <input data-bind="value: firstName, hasFocus: isEditingName" />
-            <span data-bind="visible: isEditingName"> You're editing the name!</span>
-        </p>
-        <p>First name capitalized: <strong data-bind="text: firstNameCaps"></strong></p>
+        
+        <div id="section-one">
+            <p>
+                First name: <input data-bind="value: firstName, hasFocus: isEditingName" />
+                <span data-bind="visible: isEditingName"> You're editing the name!</span>
+            </p>
+            <p>First name capitalized: <strong data-bind="text: firstNameCaps"></strong></p>
+        </div>
+
+        <div id="section-two">
+            <h3>Template Binding</h3>
+            <div data-bind="template: { name: 'person-template', data: details }"></div>
+    
+            <script type="text/html" id="person-template">
+                <h4>Person Template</h4>
+                <span data-bind="text: name"></span>
+            </script>
+        </div>
+        
     </body>
 </html>
