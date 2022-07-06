@@ -6,7 +6,8 @@
         
         <div id="section-one">
             <p>
-                First name: <input data-bind="value: firstName, hasFocus: isEditingName" />
+                First name: 
+                <input data-bind="value: firstName, hasFocus: isEditingName" />
                 <span data-bind="visible: isEditingName"> You're editing the name!</span>
             </p>
             <p>First name capitalized: <strong data-bind="text: firstNameCaps"></strong></p>
@@ -20,6 +21,10 @@
                 <h4>Person Template</h4>
                 <span data-bind="text: name"></span>
             </script>
+        </div>
+
+        <div id="section-three">
+            <div data-bind="ojComponent:{component: 'ojPopup'}"></div>
         </div>
         
     </body>
