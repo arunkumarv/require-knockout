@@ -1,8 +1,11 @@
 define([], function (){
 
-    const sectionTwoViewModel = function(){
+    class sectionTwoViewModel {
+        
+        constructor() {
 
-        this.details = { name: 'Arunkumar V' }
+            this.details = { name: 'Arunkumar V' };
+        }
     }
 
     return sectionTwoViewModel;

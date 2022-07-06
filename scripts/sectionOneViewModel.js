@@ -1,18 +1,21 @@
 
 define(['libs/knockout-3.5.1'], function(ko) {
 
-    const sectionOneViewModel = function() {
+    class sectionOneViewModel {
+        
+        constructor() {
 
-        this.firstName = ko.observable('Bert');
+            this.firstName = ko.observable('Bert');
 
-        this.firstNameCaps = ko.pureComputed(function() {
+            this.firstNameCaps = ko.pureComputed(function () {
 
-            return this.firstName().toUpperCase();
+                return this.firstName().toUpperCase();
 
-        }, this);
+            }, this);
 
-        this.isEditingName = ko.observable();
-    };
+            this.isEditingName = ko.observable();
+        }
+    }
 
     return sectionOneViewModel;
 });
