@@ -1,27 +1,50 @@
 <html>
-    <head>
-        <script type="text/javascript" data-main="scripts/init.js" src="scripts/libs/require.js"></script>
-    </head>
-    <body>
-        
-        <div id="section-one">
-            <p>
-                First name: 
-                <input data-bind="value: firstName, hasFocus: isEditingName" />
-                <span data-bind="visible: isEditingName"> You're editing the name!</span>
-            </p>
-            <p>First name capitalized: <strong data-bind="text: firstNameCaps"></strong></p>
-        </div>
 
-        <div id="section-two">
-            <h3>Template Binding</h3>
-            <div data-bind="template: { name: 'person-template', data: details }"></div>
-        </div>
+<head>
+    <script type="text/javascript" data-main="scripts/init.js" src="scripts/libs/require.js"></script>
+    <link rel="stylesheet" href="static/style.css">
+</head>
 
-        <div id="section-three">
-            <div data-bind="ojComponent:{component: 'ojPopup'}"></div>
-        </div>
-    
+<body>
 
-    </body>
+    <div id="native-pop">
+        <div data-bind="template: { name: 'lorem-ipsum' }"></div>
+        <div class="outer" id="outer">
+            <div class="subject" id="subject">
+                <div class="inner">
+                    Thread 1
+                </div>
+                <div class="inner">
+                    Thread 2
+                </div>
+                <div class="inner">
+                    Thread 3
+                </div>
+            </div>
+
+            <div id="popup" style="display:none; position: absolute;"><button style="padding:5px 10px;">P</button></div>
+        </div>
+    </div>
+
+    <div id="section-one">
+        <input data-bind="value: firstName, hasFocus: isEditingName" />
+        <span data-bind="visible: isEditingName"> You're editing the name!</span>
+        </p>
+        <p>
+            <strong data-bind="text: firstNameCaps"></strong>
+        </p>
+    </div>
+
+    <div id="section-two">
+        <h3>Template Binding</h3>
+        <div data-bind="template: { name: 'person-template', data: details }"></div>
+    </div>
+
+    <div id="section-three">
+        <div data-bind="ojComponent:{component: 'ojPopup'}"></div>
+    </div>
+
+
+</body>
+
 </html>
